@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "../../components/Post/Post";
+import Post from "@/components/Post/Post";
 import styles from "./PostList.module.scss";
 
 const posts = ["post1", "post2", "post3", "post4", "post5", "post6"];

@@ -1,22 +1,19 @@
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import styles from "./SalesIntro.module.scss";
+import styles from "./Geography.module.scss";
 import ButtonGroup from "@/components/ButtonGroup/ButtonGroup";
 import ExampleInput from "@/components/ExampleInput/ExampleInput";
 import FormInput from "@/components/FormInput/FormInput";
 import ResultCopy from "@/modules/ResultCopy/ResultCopy";
 
-const SalesIntro = () => {
+const Geography = () => {
   return (
     <div>
-      <h4 className={styles.salesIntro}>Intro Message</h4>
-      <Card className={styles.salesIntroCard}>
+      <Card className={styles.geographyCard}>
         <Row>
           <Col>
-            <FormInput label="Who are you writing to?" />
-            <FormInput label="What's their position?" />
-            <FormInput label="What do we want?" />
+            <FormInput label="Where are you looking for companies at?" />
             <ButtonGroup />
           </Col>
           <Col>
@@ -29,4 +26,4 @@ const SalesIntro = () => {
   );
 };
 
-export default SalesIntro;
+export default Geography;

@@ -1,13 +1,13 @@
 import FormTextArea from "@/components/FormTextArea/FormTextArea";
 import ResultCopy from "@/modules/ResultCopy/ResultCopy";
 
-const TextSummary = () => {
+const FreePrompt = () => {
   return (
     <>
-      <FormTextArea label="Original text" rows={10} />
+      <FormTextArea label="Enter your prompt" rows={10} />
       <ResultCopy />
     </>
   );
 };
 
-export default TextSummary;
+export default FreePrompt;

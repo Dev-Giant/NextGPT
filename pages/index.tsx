@@ -2,9 +2,9 @@ import Head from "next/head";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import styles from "./index.module.scss";
-import PostList from "../modules/PostList/PostList";
-import TextSummary from "../modules/General/TextSummary/TextSummary";
-import OwnPost from "../modules/General/OwnPost/OwnPost";
+import PostList from "@/modules/PostList/PostList";
+import TextSummary from "@/modules/General/TextSummary/TextSummary";
+import FreePrompt from "@/modules/General/FreePrompt/FreePrompt";
 
 export default function Home() {
   return (
@@ -20,8 +20,8 @@ export default function Home() {
           <Tab eventKey="textSummary" title="Text summarization">
             <TextSummary />
           </Tab>
-          <Tab eventKey="ownPost" title="Free From Prompt">
-            <OwnPost />
+          <Tab eventKey="freePrompt" title="Free From Prompt">
+            <FreePrompt />
           </Tab>
           <Tab eventKey="linkedinPosts" title="Linked-In Post">
             <PostList />

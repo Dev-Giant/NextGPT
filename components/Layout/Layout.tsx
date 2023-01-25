@@ -11,8 +11,8 @@ interface LayoutProps {
 
 const Layout = (props: LayoutProps) => {
   const router = useRouter();
-  const routes = ["/", "/marketing", "/sales", "/recruitment"];
-  const navbars = ["General", "Marketing", "Sales", "Recruitment"];
+  const routes = ["/", "/sales", "/marketing", "/recruitment"];
+  const navbars = ["General", "Sales", "Marketing", "Recruitment"];
 
   return (
     <div className={styles.mainBody}>

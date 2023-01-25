@@ -1,22 +1,21 @@
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import styles from "./SalesIntro.module.scss";
+import styles from "./Fit.module.scss";
 import ButtonGroup from "@/components/ButtonGroup/ButtonGroup";
 import ExampleInput from "@/components/ExampleInput/ExampleInput";
 import FormInput from "@/components/FormInput/FormInput";
+import FormTextArea from "@/components/FormTextArea/FormTextArea";
 import ResultCopy from "@/modules/ResultCopy/ResultCopy";
 
-const SalesIntro = () => {
+const Fit = () => {
   return (
     <div>
-      <h4 className={styles.salesIntro}>Intro Message</h4>
-      <Card className={styles.salesIntroCard}>
+      <Card className={styles.fitCard}>
         <Row>
           <Col>
-            <FormInput label="Who are you writing to?" />
-            <FormInput label="What's their position?" />
-            <FormInput label="What do we want?" />
+            <FormTextArea label="What's the company description" rows={7} />
+            <FormInput label="URL address (optional)" />
             <ButtonGroup />
           </Col>
           <Col>
@@ -29,4 +28,4 @@ const SalesIntro = () => {
   );
 };
 
-export default SalesIntro;
+export default Fit;
