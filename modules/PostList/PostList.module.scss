@@ -1,0 +1,20 @@
+.postGrid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.postListDescription {
+    height: 70px;
+    opacity: 0.5;
+}
+
+.postViewOptions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.opacityMask {
+    opacity: 0.5;
+}

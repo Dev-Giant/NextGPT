@@ -1,0 +1,44 @@
+.postItem {
+    padding: 11px 15px 20px 15px;
+    border-radius: 15px !important;
+    font-size: 14px;
+}
+
+.postImage {
+    height: 132px;
+    background: #ECEEEF;
+    margin-bottom: 20px;
+}
+
+.postEdit {
+    width: 100%;
+    border-radius: 10px !important;
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #EAEAEA !important;
+}
+
+.postGenerate {
+    width: 100%;
+    border-radius: 10px !important;
+    background-color: #E0EEF5 !important;
+    color: #128BC8 !important;
+    border: none !important;
+}
+
+.postDescription {
+    opacity: 0.5;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+.postPublishInfo {
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.postTags {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 20px;
+}
