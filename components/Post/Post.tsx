@@ -30,10 +30,10 @@ const Post = () => {
         </div>
         <Row>
           <Col>
-            <Button className={styles.postEdit}>Edit Post</Button>
+            <Button className={styles.postEdit}>Edit</Button>
           </Col>
-          <Col>
-            <Button className={styles.postGenerate}>Generate Post</Button>
+          <Col sm={8}>
+            <Button className={styles.postGenerate}>Primary</Button>
           </Col>
         </Row>
       </Card.Body>

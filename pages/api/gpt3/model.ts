@@ -5,19 +5,18 @@ import type { NextApiRequest, NextApiResponse } from "next";
 export type GPT3EndpointResponse = {
     data: Record<any, any>
 }
-
 // Just an example handler
-const handler = async ({req, res}: {req: NextApiRequest, res: NextApiResponse<GPT3EndpointResponse>}) => {
+export default async function handler(
+    req: NextApiRequest,
+    res: NextApiResponse<GPT3EndpointResponse>
+) {
     
     // just to see if it all works
     const response = await openai.listModels()
-    const models = response.data.data
+    const models = await response.data.data
     
     // Just a hello world response
-    res.json({
+    res.status(200).json({
         data: {models}
     })
 }
-
-
-export default handler;

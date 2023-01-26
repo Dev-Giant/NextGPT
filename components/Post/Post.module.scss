@@ -15,15 +15,17 @@
     border-radius: 10px !important;
     background-color: white !important;
     color: black !important;
-    border: 1px solid #EAEAEA !important;
+    border: 1px solid #DCDEE0 !important;
+    filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05));
 }
 
 .postGenerate {
     width: 100%;
     border-radius: 10px !important;
-    background-color: #E0EEF5 !important;
-    color: #128BC8 !important;
+    color: white !important;
     border: none !important;
+    background-color: #0098DA !important;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
 
 .postDescription {
