@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// We want to be logging who uses our app and when
+model GenerationLog {
+  id       String @id @default(cuid())
+  // unit time stamp
+  time     BigInt
+  userId   String @map("user_id")
+  prompt   String
+  response String
+
+  @@unique([userId])
+}

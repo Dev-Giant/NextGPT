@@ -9,7 +9,7 @@ type PostProps = {}
 
 const Post = ({}: PostProps) => {
   return (
-    <Card className={styles.postItem} data-testid="post">
+    <Card className={styles.postItem}>
       <Card.Img className={styles.postImage} variant="top" src="holder.js/100px180" />
       <Card.Body className="p-0">
         <Row className={styles.postPublishInfo}>

@@ -13,11 +13,17 @@ const customJestConfig = {
   setupFilesAfterEnv: ['./jest.setup.js'],
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
-    '^@/components/(.*)$': './components/$1',
+    '^@/components/(.*)$': '<rootDir>/components/$1',
 
-    '^@/pages/(.*)$': './pages/$1',
+    '^@/modules/(.*)$': '<rootDir>/modules/$1',
+
+    '^@/pages/(.*)$': '<rootDir>/pages/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
+  testPathIgnorePatterns: [
+    "<rootDir>/.next/",
+    "<rootDir>/e2e"
+  ],
   detectLeaks: true,
   roots: [
     './',
