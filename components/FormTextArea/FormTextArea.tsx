@@ -6,7 +6,6 @@ interface FormTextAreaProps {
   label: string;
   rows: number;
   className?: string;
-  inputType?: string;
   placeHolder?: string;
 }
 
@@ -17,7 +16,6 @@ const FormTextArea = (props: FormTextAreaProps) => {
       <Form.Control
         as="textarea"
         rows={props.rows}
-        type={props?.inputType ? props?.inputType : "text"}
         placeholder={props?.placeHolder ? props?.placeHolder : ""}
       />
     </div>
