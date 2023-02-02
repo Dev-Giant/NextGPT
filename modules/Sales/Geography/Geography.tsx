@@ -13,7 +13,7 @@ const Geography = () => {
       <Card className={styles.geographyCard}>
         <Row>
           <Col>
-            <FormInput label="Where are you looking for companies at?" />
+            <FormInput label="Where are you looking for companies at?" isRequired/>
             <ButtonGroup />
           </Col>
           <Col>

@@ -1,4 +1,11 @@
+@import '../../styles/variables.scss';
+
 .formStyle {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.validationError {
+    margin: 5px 0;
+    color: $main-error;
 }

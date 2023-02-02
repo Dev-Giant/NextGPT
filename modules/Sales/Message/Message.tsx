@@ -14,8 +14,8 @@ const Message = () => {
       <Card className={styles.messageCard}>
         <Row>
           <Col>
-            <FormInput label="Who are you writing to" />
-            <FormTextArea label="Details" rows={7} />
+            <FormInput label="Who are you writing to" isRequired/>
+            <FormTextArea label="Details" rows={7} isRequired/>
             <ButtonGroup />
           </Col>
           <Col>

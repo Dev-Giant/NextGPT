@@ -14,7 +14,7 @@ const Fit = () => {
       <Card className={styles.fitCard}>
         <Row>
           <Col>
-            <FormTextArea label="What's the company description" rows={7} />
+            <FormTextArea label="What's the company description" rows={7} isRequired/>
             <FormInput label="URL address (optional)" />
             <ButtonGroup />
           </Col>

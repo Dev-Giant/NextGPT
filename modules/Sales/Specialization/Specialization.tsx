@@ -13,7 +13,7 @@ const Specialization = () => {
       <Card className={styles.specializationCard}>
         <Row>
           <Col>
-            <FormInput label="What's the name of the company?" />
+            <FormInput label="What's the name of the company?" isRequired />
             <FormInput label="URL address (optional)" />
             <ButtonGroup />
           </Col>

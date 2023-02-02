@@ -1,8 +1,15 @@
+@import '../../styles/variables.scss';
+
 .formStyle {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .textAreaLabel {
-    color: rgba(black, 0.5);
+    color: $color-text;
+}
+
+.validationError {
+    margin: 5px 0;
+    color: $main-error;
 }

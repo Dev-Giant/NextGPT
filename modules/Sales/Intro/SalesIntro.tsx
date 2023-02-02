@@ -14,9 +14,9 @@ const SalesIntro = () => {
       <Card className={styles.salesIntroCard}>
         <Row>
           <Col>
-            <FormInput label="Who are you writing to?" />
-            <FormInput label="What's their position?" />
-            <FormInput label="What do we want?" />
+            <FormInput label="Who are you writing to?" isRequired/>
+            <FormInput label="What's their position?" isRequired/>
+            <FormInput label="What do we want?" isRequired/>
             <ButtonGroup />
           </Col>
           <Col>

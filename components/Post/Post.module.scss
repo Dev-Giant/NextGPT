@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .postItem {
     padding: 11px 15px 20px 15px;
     border-radius: 15px !important;
@@ -6,32 +8,38 @@
 
 .postImage {
     height: 132px;
-    background: #ECEEEF;
+    background: $main-background;
     margin-bottom: 20px;
+}
+
+.postTitle {
+    height: 50px;
+    overflow-y: hidden;
 }
 
 .postEdit {
     width: 100%;
-    border-radius: 10px !important;
-    background-color: white !important;
-    color: black !important;
-    border: 1px solid #DCDEE0 !important;
-    filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05));
+    border-radius: $border-radius !important;
+    background-color: $main-white !important;
+    color: $main-black !important;
+    border: 1px solid $button-light-border !important;
+    box-shadow: $button-shadow;
 }
 
 .postGenerate {
     width: 100%;
-    border-radius: 10px !important;
-    color: white !important;
+    border-radius: $border-radius !important;
+    color: $main-white !important;
     border: none !important;
-    background-color: #0098DA !important;
-    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    background-color: $button-light-blue !important;
+    box-shadow: $button-shadow;
 }
 
 .postDescription {
     opacity: 0.5;
     margin-bottom: 20px;
     height: 60px;
+    overflow-y: hidden;
 }
 
 .postPublishInfo {

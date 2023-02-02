@@ -4,7 +4,7 @@ import ResultCopy from "@/modules/ResultCopy/ResultCopy";
 const FreePrompt = () => {
   return (
     <>
-      <FormTextArea label="Enter your prompt" rows={10} />
+      <FormTextArea label="Enter your prompt" rows={10} isRequired/>
       <ResultCopy />
     </>
   );

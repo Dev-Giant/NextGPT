@@ -4,7 +4,7 @@ import ResultCopy from "@/modules/ResultCopy/ResultCopy";
 const TextSummary = () => {
   return (
     <>
-      <FormTextArea label="Original text" rows={10} />
+      <FormTextArea label="Original text" rows={10} isRequired/>
       <ResultCopy />
     </>
   );

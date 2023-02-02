@@ -1,31 +1,30 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import styles from './Post.module.scss';
+import styles from "./Post.module.scss";
+import { Item } from "../../types/RSSTypes";
 
-type PostProps = {}
+type PostProps = {
+  data: Item;
+};
 
-const Post = ({}: PostProps) => {
+const Post = (props: PostProps) => {
   return (
     <Card className={styles.postItem}>
-      <Card.Img className={styles.postImage} variant="top" src="holder.js/100px180" />
+      <Card.Img
+        className={styles.postImage}
+        variant="top"
+        src="holder.js/100px180"
+      />
       <Card.Body className="p-0">
         <Row className={styles.postPublishInfo}>
-          <Col>
-            Published On
-          </Col>
-          <Col className="text-end">
-            Post Author
-          </Col>
+          <Col>{props.data.pubDate}</Col>
+          <Col className="text-end">Post Author</Col>
         </Row>
-        <Card.Title>
-          Card Title
-        </Card.Title>
-        <p className={styles.postDescription}>
-          Card Preview Text
-        </p>
+        <Card.Title className={styles.postTitle}>{props.data.title}</Card.Title>
+        <p className={styles.postDescription}>{props.data.description}</p>
         <div className={styles.postTags}>
           <span>Internal_Tag1</span>
           <span>Internal_Tag2</span>

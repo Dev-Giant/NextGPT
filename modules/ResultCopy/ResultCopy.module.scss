@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .resultCopyResult {
     margin-top: 73px;
     margin-bottom: 15px;
@@ -15,17 +17,17 @@
     width: 50%;
     margin-top: 30px;
     border-radius: 10px !important;
-    background-color: #E0EEF5 !important;
-    color: #128BC8 !important;
+    background-color: $panel-white !important;
+    color: $button-blue !important;
     border: none !important;
 }
 
 .resultCopyResultPlaceHolderTitle {
-    background-color: #EAEAEA !important;
+    background-color: $main-light-gray !important;
     border-radius: 33px;
 }
 
 .resultCopyResultPlaceHolderText {
-    background-color: #F4F4F4 !important;
+    background-color: $placeholder-text !important;
     border-radius: 33px;
 }

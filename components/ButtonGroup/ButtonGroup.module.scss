@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .buttonGroup {
     margin-top: 20px !important;
     margin-bottom: 20px !important;
@@ -5,16 +7,16 @@
 
 .buttonGroupClearButton {
     width: 100%;
-    border-radius: 10px !important;
-    background-color: white !important;
+    border-radius: $border-radius !important;
+    background-color: $main-white !important;
     color: black !important;
-    border: 1px solid #EAEAEA !important;
+    border: 1px solid $main-light-gray !important;
 }
 
 .buttonGroupGenerateButton {
     width: 100%;
-    border-radius: 10px !important;
-    background-color: #E0EEF5 !important;
-    color: #128BC8 !important;
+    border-radius: $border-radius !important;
+    background-color: $main-light-blue !important;
+    color: $button-blue !important;
     border: none !important;
 }

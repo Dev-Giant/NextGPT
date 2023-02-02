@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .mainBody{
     display: flex;
 }
@@ -11,7 +13,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 22px 27px 138px 30px;
-    background: #ECEEEF;
+    background: $main-background;
 }
 
 .logo{
@@ -27,15 +29,15 @@
             text-decoration: none;
             display: flex;
             width: 100%;
-            color: black;
+            color: $main-black;
         }
     }
 }
 
 .active{
-    background-color: #128BC8;
+    background-color: $button-blue;
     border-radius: 10px;
     a{
-        color: white !important;
+        color: $main-white !important;
     }
 }

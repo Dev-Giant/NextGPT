@@ -13,7 +13,7 @@ const OwnPost = () => {
       <Card className={styles.ownPostCard}>
         <Row>
           <Col>
-            <FormInput label="What are you writing about?" />
+            <FormInput label="What are you writing about?" isRequired/>
             <ButtonGroup />
           </Col>
           <Col>
