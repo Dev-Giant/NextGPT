@@ -1,0 +1,78 @@
+{
+  "data": {
+    "posts": [
+      {
+        "title": "The Many Roles &amp; Responsibilities Of Startup CTOs: A Deep Dive",
+        "link": "https://www.itmagination.com/blog/many-roles-responsibilities-startup-cto-deep-dive",
+        "guid": "https://www.itmagination.com/blog/many-roles-responsibilities-startup-cto-deep-dive",
+        "description": "The role of a CTO in a startup company is multi-faceted and involves several key tasks and responsibilities such as hiring engineers, developing a company-wide security policy, creating a product roadmap and user experience, and managing product development and application architecture. They play a crucial role in the success of a startup and must be able to navigate the complex world of security protocols and procedures, attract top talent, and ensure the company&#39;s values align with the team&#39;s values.",
+        "pubDate": "Wed, 25 Jan 2023 00:00:00 GMT",
+        "content": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63d165d02aed92426dfc0321_The%20Many%20Roles%20Of%20A%20Startup%20CTO.png",
+        "thumbnail": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63d165d02aed92426dfc0321_The%20Many%20Roles%20Of%20A%20Startup%20CTO.png"
+      },
+      {
+        "title": "How much should companies spend on their IT budget",
+        "link": "https://www.itmagination.com/blog/how-much-should-companies-spend-on-their-it-budget",
+        "guid": "https://www.itmagination.com/blog/how-much-should-companies-spend-on-their-it-budget",
+        "description": "IT budgets can be a significant expense, and it&#39;s essential to make sure that the money is being spent effectively to achieve the desired results. In this blog post, we will discuss the factors that companies should consider when determining their IT budget, provide industry benchmarks for IT budget spending, and offer strategies for maximizing the effectiveness of an IT budget.",
+        "pubDate": "Sun, 22 Jan 2023 00:00:00 GMT",
+        "content": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63cdba93a9b7eb0344599da9_stellrweb-djb1whucfBY-unsplash.jpg",
+        "thumbnail": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63cdba93a9b7eb0344599da9_stellrweb-djb1whucfBY-unsplash.jpg"
+      },
+      {
+        "title": "How Much Should Companies Spend On Their Software Development Budget",
+        "link": "https://www.itmagination.com/blog/how-much-should-companies-spend-on-their-software-development-budget",
+        "guid": "https://www.itmagination.com/blog/how-much-should-companies-spend-on-their-software-development-budget",
+        "description": "Budgeting for software development can be costly; however, ensuring that funds are being utilized in a way that delivers the desired results is critical. In this blog post, we will evaluate the considerations that businesses should take into account when formulating their software development budget, provide insight into industry-wide averages for software development budget expenses, and present strategies for optimizing a software development budget&#39;s efficacy.",
+        "pubDate": "Sun, 22 Jan 2023 00:00:00 GMT",
+        "content": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63d8167fbf2a3e1111159ee4_How%20Much%20Should%20Companies%20Spend%20On%20Their%20Software%20Development%20Budget.jpg",
+        "thumbnail": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63d8167fbf2a3e1111159ee4_How%20Much%20Should%20Companies%20Spend%20On%20Their%20Software%20Development%20Budget.jpg"
+      },
+      {
+        "title": "7 Principles of Software Testing",
+        "link": "https://www.itmagination.com/blog/7-principles-of-software-testing",
+        "guid": "https://www.itmagination.com/blog/7-principles-of-software-testing",
+        "description": "Develop the skills to use 7 essential testing principles in your work and get the most out of your software development cycle. Discover the value of these principles and how to apply them to your projects with helpful tips and advice.",
+        "pubDate": "Fri, 20 Jan 2023 00:00:00 GMT",
+        "content": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63ca7161da08948c3fa1c14b_seven_principles_202301.png",
+        "thumbnail": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63ca7161da08948c3fa1c14b_seven_principles_202301.png"
+      },
+      {
+        "title": "Flutter vs React Native",
+        "link": "https://www.itmagination.com/blog/flutter-vs-react-native",
+        "guid": "https://www.itmagination.com/blog/flutter-vs-react-native",
+        "description": "In this article, we will compare the two frameworks, looking at their native user interfaces, components available out of the box, performance, platforms, and languages, and provide a summary of which framework is best.",
+        "pubDate": "Mon, 16 Jan 2023 00:00:00 GMT",
+        "content": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63c02654ecfe1a5342ccce0e_flutter-react-native_202301.png",
+        "thumbnail": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63c02654ecfe1a5342ccce0e_flutter-react-native_202301.png"
+      },
+      {
+        "title": "React: Building Single-Page Applications with JavaScript. What is React?",
+        "link": "https://www.itmagination.com/blog/react-building-single-page-applications-with-javascript-what-is-react",
+        "guid": "https://www.itmagination.com/blog/react-building-single-page-applications-with-javascript-what-is-react",
+        "description": "iscover why React is still a popular JavaScript framework with developers around the world. Learn how components are written in JSX, how it&#39;s used to create single-page and multi-page applications, its fast rendering capabilities and great third-party integrations/tools.",
+        "pubDate": "Thu, 12 Jan 2023 00:00:00 GMT",
+        "content": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/639c81af8d8265c9adc59b97_reactjs-cover_202212.png",
+        "thumbnail": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/639c81af8d8265c9adc59b97_reactjs-cover_202212.png"
+      },
+      {
+        "title": "React 18 - What Changes Does It Bring And How Will They Affect You? [UPDATED]",
+        "link": "https://www.itmagination.com/blog/react-18-what-changes-does-it-bring",
+        "guid": "https://www.itmagination.com/blog/react-18-what-changes-does-it-bring",
+        "description": "What changes does React 18 bring you, and your business?",
+        "pubDate": "Tue, 10 Jan 2023 00:00:00 GMT",
+        "content": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/6364f87a0abd0980b1553d50_React%2018.png",
+        "thumbnail": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/6364f87a0abd0980b1553d50_React%2018.png"
+      },
+      {
+        "title": "BDD Testing. What Tools Are There &amp; Examining One of Them",
+        "link": "https://www.itmagination.com/blog/bdd-testing-what-tools-are-there-examining-one-of-them",
+        "guid": "https://www.itmagination.com/blog/bdd-testing-what-tools-are-there-examining-one-of-them",
+        "description": "Learn how to use the Behavior Driven Development (BDD) Framework with pytest-bdd to create test scripts in plain English and save time needed for writing acceptance tests. We&#39;ll show you how to set up your environment, write feature files, create page objects, and run your tests! With this BDD approach, teams can collaborate more closely while still ensuring quality testing.",
+        "pubDate": "Tue, 10 Jan 2023 00:00:00 GMT",
+        "content": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63a5b95ff404e8f2189eb456_behaviour-driven-design-pytest-bdd_202212.png",
+        "thumbnail": "https://uploads-ssl.webflow.com/601be0f0f62d8b2e2a92b830/63a5b95ff404e8f2189eb456_behaviour-driven-design-pytest-bdd_202212.png"
+      }
+    ]
+  }
+}
