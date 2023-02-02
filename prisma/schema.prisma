@@ -11,13 +11,18 @@ datasource db {
 }
 
 // We want to be logging who uses our app and when
-model GenerationLog {
-  id       String @id @default(cuid())
+model Log {
+  id       String  @id @default(cuid())
   // unit time stamp
   time     BigInt
-  userId   String @map("user_id")
-  prompt   String
-  response String
+  userId   String  @map("user_id")
+  prompt   String?
+  response String?
+  // function is the workflow that the user just used 
+  functionName String @map("function_name")
+  url      String
+  // status is the status of the response from openai
+  status   Int
 
   @@unique([userId])
 }

@@ -18,20 +18,27 @@ export type LogEndpointBodyType = {
     userId: string,
     prompt: string,
     response: string,
-
+    status: number,
+    functionName: string,
+    url: string
 
 }
 
 export const handler: NextApiHandler<LogEndpointResponseType> = async (req: NextApiRequest, res: NextApiResponse<LogEndpointResponseType>) => {
     if (req.method === "POST") {
         try {
-            const { time, userId, prompt, response }: LogEndpointBodyType = req.body satisfies LogEndpointBodyType
-            await prisma.generationLog.create({
+            const { time, userId, prompt, response, functionName, status, url }: LogEndpointBodyType = req.body satisfies LogEndpointBodyType
+            await prisma.log.create({
                 data: {
                     time,
-                    prompt,
-                    response,
                     userId,
+                    // the name of the function, such as "geography" or "linkedin post"
+                    functionName,
+                    // status number such as 200 
+                    status,
+                    url,
+                    prompt: prompt ?? "No prompt logged",
+                    response: response ?? "No response logged"
                 }
             })
 
