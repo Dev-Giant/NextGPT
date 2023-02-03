@@ -26,3 +26,15 @@ model Log {
 
   @@unique([userId])
 }
+
+model Article {
+  id           String @id @default(cuid())
+  title        String
+  link         String
+  description  String
+  imageUrl     String
+  thumbnailUrl String
+  publishedAt  DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
