@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import styles from "./Post.module.scss";
-import { Item } from "../../types/RSSTypes";
+import type { Item } from "../../types/RSSTypes";
 
 type PostProps = {
   data: Item;

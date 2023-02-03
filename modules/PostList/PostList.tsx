@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useAppSelector, useAppDispatch } from "../../src/redux/hook";
 import { getPosts } from "../../src/redux/slices/sales";
 import { IRootState } from "../../src/redux/store";
-import { Item } from "../../types/RSSTypes";
+import type { Item } from "../../types/RSSTypes";
 import Post from "@/components/Post/Post";
 import styles from "./PostList.module.scss";
 import Pagination from "@/components/Pagination/Pagination";
@@ -17,9 +17,9 @@ const PostList: React.FC = () => {
   const [isFetch, setIsFetch] = useState(true);
 
   const getPostDatas = useCallback(() => {
-    if(isFetch) {
-    dispatch(getPosts(page));
-    setIsFetch(false);
+    if (isFetch) {
+      dispatch(getPosts(page));
+      setIsFetch(false);
     }
   }, [dispatch, isFetch, page]);
 
@@ -46,7 +46,12 @@ const PostList: React.FC = () => {
         ))}
       </div>
       <div className={styles.paginationDiv}>
-        <Pagination total={Math.floor(total / 6)} page={page} setPage={setPage} setIsFetch={setIsFetch}/>
+        <Pagination
+          total={Math.floor(total / 6)}
+          page={page}
+          setPage={setPage}
+          setIsFetch={setIsFetch}
+        />
       </div>
     </>
   );

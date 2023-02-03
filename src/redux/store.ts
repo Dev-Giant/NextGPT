@@ -10,3 +10,4 @@ export { store };
 export type IRootState = ReturnType<typeof rootReducer>;
 
 export type AppDispatch = typeof store.dispatch;
+export type AppStore = typeof store;
