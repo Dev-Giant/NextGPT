@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.editableTable {
+    background: $main-white;
+    tbody {
+        tr{
+            td{
+                padding: unset;
+                input {
+                    border: unset;
+                    width: 100%;
+                    padding: 8px;
+                }
+            }
+        }
+    }
+}
