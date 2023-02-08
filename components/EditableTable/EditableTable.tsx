@@ -21,7 +21,7 @@ const EditableTable = (props: editableTableProps) => {
             <tbody>
                 {
                     props.rows.map((item) => (
-                        <TableRow data={item} key={item as string} types={props.types} />
+                        <TableRow data={item} key={JSON.stringify(item)} types={props.types} />
                     ))
                 }
             </tbody>
