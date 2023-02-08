@@ -2,10 +2,11 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useAppSelector, useAppDispatch } from "../../src/redux/hook";
 import { getPosts } from "../../src/redux/slices/sales";
 import { IRootState } from "../../src/redux/store";
-import type { Item } from "../../types/RSSTypes";
+import { initialItemState, Item } from "../../types/RSSTypes";
 import Post from "@/components/Post/Post";
 import styles from "./PostList.module.scss";
 import Pagination from "@/components/Pagination/Pagination";
+import GenerateModal from "../GenerateModal/GenerateModal";
 
 const PostList: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -15,6 +16,8 @@ const PostList: React.FC = () => {
 
   const [page, setPage] = useState(0);
   const [isFetch, setIsFetch] = useState(true);
+  const [show, setShow] = useState(false);
+  const [data, setData] = useState(initialItemState);
 
   const getPostDatas = useCallback(() => {
     if (isFetch) {
@@ -22,6 +25,8 @@ const PostList: React.FC = () => {
       setIsFetch(false);
     }
   }, [dispatch, isFetch, page]);
+
+  const handleClose = () => setShow(false);
 
   useEffect(() => {
     getPostDatas();
@@ -42,7 +47,12 @@ const PostList: React.FC = () => {
       </div>
       <div className={styles.postGrid}>
         {posts.map((item) => (
-          <Post key={item.title} data={item} />
+          <Post
+            key={item.title}
+            data={item}
+            setShow={setShow}
+            setData={setData}
+          />
         ))}
       </div>
       <div className={styles.paginationDiv}>
@@ -53,6 +63,7 @@ const PostList: React.FC = () => {
           setIsFetch={setIsFetch}
         />
       </div>
+      <GenerateModal data={data} show={show} handleClose={handleClose} />
     </>
   );
 };

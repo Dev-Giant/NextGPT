@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss"; 
+
+.modalLoading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    height: 200px;
+}
+
+.modalResult {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 16px;
+}
+
+.modalButtonGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modalClose {
+    width: 100%;
+    border-radius: $border-radius !important;
+    background-color: $main-white !important;
+    color: $main-black !important;
+    border: 1px solid $button-light-border !important;
+    box-shadow: $button-shadow;
+}
+
+.modalCopy {
+    width: 100%;
+    border-radius: $border-radius !important;
+    color: $main-white !important;
+    border: none !important;
+    background-color: $button-light-blue !important;
+    box-shadow: $button-shadow;
+}

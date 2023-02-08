@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:cov":"jest --coverage",
+    "test:cov": "jest --coverage",
     "test:e2e": "playwright test",
     "test:unit": "jest --ci",
     "test": "jest --watch"
@@ -23,7 +23,8 @@
     "react": "18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "18.2.0",
-    "react-redux": "^8.0.5"
+    "react-redux": "^8.0.5",
+    "swr": "^2.0.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.30.0",

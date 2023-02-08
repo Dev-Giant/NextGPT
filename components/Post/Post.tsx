@@ -8,9 +8,15 @@ import type { Item } from "../../types/RSSTypes";
 
 type PostProps = {
   data: Item;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+  setData: React.Dispatch<React.SetStateAction<Item>>;
 };
 
 const Post = (props: PostProps) => {
+  const handleShow = () => {
+    props.setShow(true);
+    props.setData(props.data);
+  };
   return (
     <Card className={styles.postItem}>
       <Card.Img
@@ -34,7 +40,9 @@ const Post = (props: PostProps) => {
             <Button className={styles.postEdit}>Edit</Button>
           </Col>
           <Col sm={8}>
-            <Button className={styles.postGenerate}>Primary</Button>
+            <Button className={styles.postGenerate} onClick={handleShow}>
+              Primary
+            </Button>
           </Col>
         </Row>
       </Card.Body>

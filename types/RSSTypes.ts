@@ -52,3 +52,20 @@ export interface LinkClass {
     _type:    string;
     __prefix: string;
 }
+
+export const initialItemState: Item  = {
+    title: "",
+    link: "",
+    guid: "",
+    description: "",
+    pubDate: "",
+    content: {
+      _url: "",
+      _medium: Medium.Image,
+      __prefix: Prefix.Media,
+    },
+    thumbnail: {
+      _url: "",
+      __prefix: Prefix.Media,
+    },
+}
