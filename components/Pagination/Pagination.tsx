@@ -29,7 +29,7 @@ const CustomPagination = (props: customPaginationProps) => {
     pageNumbers.push(i);
   }
   return (
-    <Pagination>
+    <Pagination data-testid="pagination">
       <Pagination.Prev
         disabled={props.page === 0}
         onClick={previousPageHandle}

@@ -3,16 +3,17 @@
 
 generator client {
   provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl"]
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 // We want to be logging who uses our app and when
 model Log {
-  id       String  @id @default(cuid())
+  id       String  @id @default(uuid())
   // unit time stamp
   time     BigInt
   userId   String  @map("user_id")
@@ -28,7 +29,7 @@ model Log {
 }
 
 model Article {
-  id           String @id @default(cuid())
+  id           Int @id @default(autoincrement())
   title        String
   link         String
   description  String

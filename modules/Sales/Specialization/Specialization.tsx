@@ -18,7 +18,7 @@ const Specialization = () => {
             <ButtonGroup />
           </Col>
           <Col>
-            <ExampleInput />
+            <ExampleInput label="Example" content="abcdef" />
           </Col>
         </Row>
       </Card>

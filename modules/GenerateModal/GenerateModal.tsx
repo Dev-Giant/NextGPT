@@ -28,7 +28,7 @@ const GenerateModal = (props: generateModalProps) => {
     navigator.clipboard.writeText(text);
   };
   return (
-    <Modal show={props.show} centered>
+    <Modal show={props.show} centered data-testid="generate_modal">
       {isLoading ? (
         <Modal.Body className={styles.modalLoading}>
           <Spinner animation="border" variant="warning" />

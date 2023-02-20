@@ -37,3 +37,8 @@ next-env.d.ts
 
 
 .env
+*azurite*
+*__blobstorage__*
+*__queuestorage__*
+junit.xml
+e2e-junit.xml

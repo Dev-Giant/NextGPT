@@ -19,7 +19,7 @@ const Message = () => {
             <ButtonGroup />
           </Col>
           <Col>
-            <ExampleInput />
+            <ExampleInput label="Example" content="abcdef" />
           </Col>
         </Row>
       </Card>

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import Post from '../../components/Post/Post'
 import Data from "../../mockData/mock_posts.json";
 import type { Item } from "../../types/RSSTypes";
@@ -12,5 +12,6 @@ describe('Post', () => {
         const buttons = screen.getAllByRole("button");
         expect(buttons[0]).toHaveTextContent("Edit");
         expect(buttons[1]).toHaveTextContent("Primary");
+        fireEvent.click(buttons[1]);
     })
 })

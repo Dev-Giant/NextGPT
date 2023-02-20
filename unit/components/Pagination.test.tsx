@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Pagination from "@/components/Pagination/Pagination";
 
 describe("Pagination", () => {
-  it("Renders a Pagination", () => {
+  it("Renders a Pagination and check for prev, next and select page functionality", () => {
     const setPage = jest.fn();
     const setIsFetch = jest.fn();
     render(

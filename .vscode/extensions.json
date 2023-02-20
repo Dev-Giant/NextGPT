@@ -1,6 +1,7 @@
 {
-    "recommendations": [
-        "ms-playwright.playwright",
-        "prisma.prisma"
-    ]
+  "recommendations": [
+    "ms-azuretools.vscode-azurefunctions",
+    "ms-playwright.playwright",
+    "prisma.prisma"
+  ]
 }

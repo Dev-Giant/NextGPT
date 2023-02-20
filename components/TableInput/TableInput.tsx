@@ -19,6 +19,7 @@ const TableInput = (props: inputProps) => {
     return (
         <td>
             <input
+                aria-label={props.type}
                 value={value}
                 onChange={handleChange}
                 onBlur={validate}

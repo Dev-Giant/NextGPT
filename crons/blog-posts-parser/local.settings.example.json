@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "PARSING_SOURCE": "https://www.itmagination.com/blog/rss.xml",
+    "DB_HOST": "localhost",
+    "DB_PORT": 5432,
+    "DB_NAME": "gpt",
+    "DB_USER": "root",
+    "DB_PASS": "example"
+  }
+}
