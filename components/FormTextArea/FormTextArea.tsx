@@ -6,6 +6,8 @@ import RequiredFieldIndicator from "../RequiredFieldIndicator/RequiredFieldIndic
 interface FormTextAreaProps {
   label: string;
   rows: number;
+  value?: string;
+  setValue?: React.Dispatch<React.SetStateAction<string>>;
   isRequired?: boolean;
   validationError?: string;
   className?: string;
@@ -13,6 +15,11 @@ interface FormTextAreaProps {
 }
 
 const FormTextArea = (props: FormTextAreaProps) => {
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if(props?.setValue) props?.setValue(e.target.value);
+  };
+
   return (
     <div className={classNames(styles.formStyle, props.className)}>
       <Form.Label className={styles.textAreaLabel}>
@@ -23,6 +30,8 @@ const FormTextArea = (props: FormTextAreaProps) => {
         as="textarea"
         rows={props.rows}
         placeholder={props?.placeHolder ? props?.placeHolder : ""}
+        value={props?.value}
+        onChange={handleChange}
       />
       {props.validationError && (
         <p className={styles.validationError}>{props.validationError}</p>

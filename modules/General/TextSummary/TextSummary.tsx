@@ -5,7 +5,7 @@ const TextSummary = () => {
   return (
     <>
       <FormTextArea label="Original text" rows={10} isRequired/>
-      <ResultCopy />
+      <ResultCopy showResult={false} />
     </>
   );
 };

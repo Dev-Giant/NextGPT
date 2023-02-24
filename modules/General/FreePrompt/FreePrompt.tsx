@@ -5,7 +5,7 @@ const FreePrompt = () => {
   return (
     <>
       <FormTextArea label="Enter your prompt" rows={10} isRequired/>
-      <ResultCopy />
+      <ResultCopy showResult={false} />
     </>
   );
 };

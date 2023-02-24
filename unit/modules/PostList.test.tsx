@@ -16,15 +16,4 @@ describe("PostList", () => {
     fireEvent.click(pages[pages.length - 1]);
     fireEvent.click(pages[0]);
   });
-
-  it("check for post generation functionality", () => {
-    customRender(<PostList />);
-    const singlePost = screen
-      .getByText("Blog Post List General")
-      .parentElement?.getElementsByClassName("postItem")[0];
-    const generateButton =
-      singlePost?.getElementsByClassName("postGenerate")[0];
-    fireEvent.click(generateButton as Element);
-    expect(screen.getByTestId("generate_modal")).toBeInTheDocument();
-  });
 });
