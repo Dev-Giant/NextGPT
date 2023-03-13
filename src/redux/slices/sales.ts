@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Data from "../../../mockData/mock_posts.json";
 
 const initialState = {
   isLoading: false,
@@ -40,15 +39,17 @@ export function getPosts(page: number) {
   return async (dispatch: any) => {
     try {
       dispatch(slice.actions.startLoading());
-      const result = Data.data.posts;
-      const pageResult = result.slice(page * pageSize, page * pageSize + pageSize)
-      dispatch(
-        slice.actions.getPostsSuccess({
-          posts: pageResult,
-          total: result.length,
-          page: page,
-        })
-      );
+      fetch(`/api/articles?page=${page}&limit=${pageSize}`)
+      .then((res) => res.json())
+      .then((data) => {
+        dispatch(
+          slice.actions.getPostsSuccess({
+            posts: data.data.articles,
+            total: data.data.count,
+            page: page,
+          })
+        );
+      })
     } catch (error) {
       dispatch(slice.actions.hasError((error as Error).message));
     }

@@ -1,6 +1,7 @@
 import { fireEvent, screen } from "@testing-library/react";
 import { customRender } from "../test-utils";
 import PostList from "../../modules/PostList/PostList";
+import Data from "../../mockData/mock_posts.json";
 
 describe("PostList", () => {
   it("renders a postlist", () => {
@@ -9,6 +10,17 @@ describe("PostList", () => {
   });
 
   it("check for pagination functionality", () => {
+    jest.mock("../../src/redux/slices/sales", () => {
+      return {
+        getPosts: jest.fn(() =>
+          Promise.resolve({
+            posts: Data.data.posts,
+            total: Data.data.posts.length,
+            page: 1,
+          })
+        ),
+      };
+    });
     customRender(<PostList />);
     const paginationComponent = screen.getByTestId("pagination");
     expect(paginationComponent).toBeInTheDocument();

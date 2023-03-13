@@ -22,7 +22,7 @@ const SalesIntro = (props: salesIntroInterface) => {
   const [purpose, setPurpose] = useState("");
   const handleGenerate = () => {
     if (author !== "" && position !== "" && purpose !== "") {
-      dispatch(getOpenAIResult(author + ", " + position + ", " + purpose));
+      dispatch(getOpenAIResult("Author: " + author + ", Author's position: " + position + ", Purpose: " + purpose));
       props.setShowResult(true);
     }
   };

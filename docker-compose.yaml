@@ -25,6 +25,7 @@ services:
     restart: always
     volumes:
       - ./:/app
+      - /app/node_modules
     links:
       - postgres
     depends_on:

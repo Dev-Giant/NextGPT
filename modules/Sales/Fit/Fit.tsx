@@ -22,7 +22,9 @@ const Fit = (props: fitInterface) => {
   const [url, setUrl] = useState("");
   const handleGenerate = () => {
     if (company !== "") {
-      dispatch(getOpenAIResult(company + ", " + url));
+      let tempUrl = "";
+      if(url) tempUrl = "url: " + url;
+      dispatch(getOpenAIResult("company description: " + company + ", " + tempUrl));
       props.setShowResult(true);
     }
   };

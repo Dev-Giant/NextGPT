@@ -22,11 +22,11 @@ const Post = (props: PostProps) => {
       <Card.Img
         className={styles.postImage}
         variant="top"
-        src="holder.js/100px180"
+        src={props.data.imageUrl}
       />
       <Card.Body className="p-0">
         <Row className={styles.postPublishInfo}>
-          <Col>{props.data.pubDate}</Col>
+          <Col>{props.data.publishedAt}</Col>
           <Col className="text-end">Post Author</Col>
         </Row>
         <Card.Title className={styles.postTitle}>{props.data.title}</Card.Title>

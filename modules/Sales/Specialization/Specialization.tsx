@@ -21,7 +21,9 @@ const Specialization = (props: specializationInterface) => {
   const [url, setUrl] = useState("");
   const handleGenerate = () => {
     if (company !== "") {
-      dispatch(getOpenAIResult(company + ", " + url));
+      let tempUrl = "";
+      if(url) tempUrl = "url: " + url;
+      dispatch(getOpenAIResult("company: " + company + ", " + tempUrl));
       props.setShowResult(true);
     }
   };

@@ -22,7 +22,7 @@ const Message = (props: messageInterface) => {
   const [details, setDetails] = useState("");
   const handleGenerate = () => {
     if (receiver !== "" && details !== "") {
-      dispatch(getOpenAIResult(receiver + ", " + details));
+      dispatch(getOpenAIResult("Receiver: " + receiver + ", Message Details: " + details));
       props.setShowResult(true);
     }
   };

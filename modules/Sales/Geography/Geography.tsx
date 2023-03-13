@@ -20,7 +20,7 @@ const Geography = (props: geographyInterface) => {
   const [position, setPosition] = useState("");
   const handleGenerate = () => {
     if (position !== "") {
-      dispatch(getOpenAIResult(position));
+      dispatch(getOpenAIResult("Company position: " + position));
       props.setShowResult(true);
     }
   };

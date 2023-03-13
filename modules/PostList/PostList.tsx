@@ -14,7 +14,7 @@ const PostList: React.FC = () => {
     (state: IRootState) => state.sales
   );
 
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const [isFetch, setIsFetch] = useState(true);
   const [show, setShow] = useState(false);
   const [data, setData] = useState(initialItemState);
@@ -46,9 +46,9 @@ const PostList: React.FC = () => {
         </div>
       </div>
       <div className={styles.postGrid}>
-        {posts.map((item) => (
+        {posts?.map((item) => (
           <Post
-            key={item.title}
+            key={item.id}
             data={item}
             setShow={setShow}
             setData={setData}

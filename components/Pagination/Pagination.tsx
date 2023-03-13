@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Pagination from "react-bootstrap/Pagination";
 
 interface customPaginationProps {
@@ -9,45 +9,83 @@ interface customPaginationProps {
 }
 
 const CustomPagination = (props: customPaginationProps) => {
-  const previousPageHandle = () => {
-    props.setPage((prev) => prev - 1);
+  const isCurrentPageFirst = props.page === 1;
+  const isCurrentPageLast = props.page === props.total;
+
+  const changePage = (number: number) => {
+    if (props.page === number) return;
+    props.setPage(number);
     props.setIsFetch(true);
   };
 
-  const nextPageHandle = () => {
-    props.setPage((prev) => prev + 1);
-    props.setIsFetch(true);
+  const onPageNumberClick = (pageNumber: number) => {
+    changePage(pageNumber);
   };
 
-  const selectPageHandle = (item: number) => {
-    props.setPage(item);
-    props.setIsFetch(true);
+  const onPreviousPageClick = () => {
+    changePage(props.page - 1);
   };
 
-  let pageNumbers = [];
-  for (let i = 0; i <= props.total; i++) {
-    pageNumbers.push(i);
-  }
-  return (
-    <Pagination data-testid="pagination">
-      <Pagination.Prev
-        disabled={props.page === 0}
-        onClick={previousPageHandle}
-      />
-      {pageNumbers.map((item) => (
+  const onNextPageClick = () => {
+    changePage(props.page + 1);
+  };
+
+  const setLastPageAsCurrent = () => {
+    if (props.page > props.total) {
+      props.setPage(props.total);
+    }
+  };
+
+  let isPageNumberOutOfRange: boolean;
+
+  const pageNumbers = [...new Array(props.total)].map((_, index) => {
+    const pageNumber = index + 1;
+    const isPageNumberFirst = pageNumber === 1;
+    const isPageNumberLast = pageNumber === props.total;
+    const isCurrentPageWithinTwoPageNumbers =
+      Math.abs(pageNumber - props.page) <= 2;
+
+    if (
+      isPageNumberFirst ||
+      isPageNumberLast ||
+      isCurrentPageWithinTwoPageNumbers
+    ) {
+      isPageNumberOutOfRange = false;
+      return (
         <Pagination.Item
-          key={item}
-          active={item === props.page}
-          onClick={() => selectPageHandle(item)}
+          key={pageNumber}
+          onClick={() => onPageNumberClick(pageNumber)}
+          active={pageNumber === props.page}
         >
-          {item + 1}
+          {pageNumber}
         </Pagination.Item>
-      ))}
-      <Pagination.Next
-        disabled={props.page === props.total}
-        onClick={nextPageHandle}
-      />
-    </Pagination>
+      );
+    }
+
+    if (!isPageNumberOutOfRange) {
+      isPageNumberOutOfRange = true;
+      return <Pagination.Ellipsis key={pageNumber} className="muted" />;
+    }
+
+    return null;
+  });
+
+  useEffect(setLastPageAsCurrent, [props.total]);
+
+  return (
+    <>
+      <Pagination data-testid="pagination">
+        <Pagination.Prev
+          onClick={onPreviousPageClick}
+          disabled={isCurrentPageFirst}
+        />
+        {pageNumbers}
+        <Pagination.Next
+          onClick={onNextPageClick}
+          disabled={isCurrentPageLast}
+        />
+      </Pagination>
+    </>
   );
 };
 

@@ -17,6 +17,10 @@ describe("Fit", () => {
     fireEvent.change(companyDescription as Node, {
       target: { value: "company" },
     });
+    const urlAddress = screen.getByText("URL address (optional)").nextSibling;
+    fireEvent.change(urlAddress as Node, {
+      target: { value: "http://localhost:3000" },
+    });
     fireEvent.click(buttons[1]);
   });
 });

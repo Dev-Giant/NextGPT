@@ -7,7 +7,7 @@ describe("Pagination", () => {
     const setIsFetch = jest.fn();
     render(
       <Pagination
-        total={3}
+        total={20}
         page={1}
         setPage={setPage}
         setIsFetch={setIsFetch}
@@ -22,6 +22,9 @@ describe("Pagination", () => {
     expect(setPage.mock.calls.length).toBe(2);
     expect(setIsFetch.mock.calls.length).toBe(2);
     fireEvent.click(screen.getByText("Next"));
+    expect(setPage.mock.calls.length).toBe(3);
+    expect(setIsFetch.mock.calls.length).toBe(3);
+    fireEvent.click(screen.getByText("1"));
     expect(setPage.mock.calls.length).toBe(3);
     expect(setIsFetch.mock.calls.length).toBe(3);
   });
