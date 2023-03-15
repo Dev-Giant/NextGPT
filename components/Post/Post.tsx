@@ -12,6 +12,15 @@ type PostProps = {
   setData: React.Dispatch<React.SetStateAction<Item>>;
 };
 
+/**
+ * Represent Post Component
+ * @param props 
+ * @argument data(Item) - Post component data(author, title, description and so on)
+ * @argument setShow(function) - a function to determine whether display or not display generation modal
+ * @argument setData(function) - a function to set data for prompt of post generation
+ * @returns Post component with dynamic data and modal config functions
+ */
+
 const Post = (props: PostProps) => {
   const handleShow = () => {
     props.setShow(true);

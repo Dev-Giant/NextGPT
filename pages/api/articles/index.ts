@@ -23,7 +23,19 @@ export type FindAllArticlesEndpointResponse = {
     error?: { message: string }
 }
 
-
+/**
+ * Represents api to get articles
+ * @param req 
+ * @argument limit - request number of data for a page
+ * @argument page - number of page
+ * @argument order - asc/desc
+ * @argument search - search index 
+ * @param res 
+ * @argument articles - data of articles we need to get from end point
+ * @argument count - total number of articles
+ * @argument limit - number of data for a page
+ * @argument page - number of page
+ */
 
 export default async function handler(
     req: NextApiRequest,

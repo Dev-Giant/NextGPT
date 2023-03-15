@@ -14,6 +14,20 @@ interface FormInputProps {
   placeHolder?: string;
 }
 
+/**
+ * Represents FormInput component
+ * @param props 
+ * @argument label(string) - form input's label
+ * @argument value(string) - form input's value
+ * @argument setValue(function) - function that handles change of form input's value
+ * @argument isRequired(boolean) - make form input as required or optional
+ * @argument validationError(string) - form input's error
+ * @argument className(string) - form input's classNames
+ * @argument inputType(string) - form input's type
+ * @argument placeHolder(string) - form input's placeholder
+ * @returns FormInput component with label, value and default input props
+ */
+
 const FormInput = (props: FormInputProps) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

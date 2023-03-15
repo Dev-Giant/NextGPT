@@ -5,6 +5,14 @@ interface exampleInputProps {
   content: string
 }
 
+/**
+ * Represents ExampleInput component
+ * @param props 
+ * @argument label(string) - input label
+ * @argument content(string) - input content
+ * @returns Static Content Component with Label
+ */
+
 const ExampleInput = (props: exampleInputProps) => {
   return (
     <>

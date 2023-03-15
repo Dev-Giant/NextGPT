@@ -8,6 +8,16 @@ interface customPaginationProps {
   setIsFetch: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+/**
+ * Represent Pagination Component
+ * @param props 
+ * @argument total(number) - total number of pages
+ * @argument page(number) - selected page number
+ * @argument setPage(function) - a function handles page change
+ * @argument setIsFetch(function) - a function determines to do data fetching or not
+ * @returns 
+ */
+
 const CustomPagination = (props: customPaginationProps) => {
   const isCurrentPageFirst = props.page === 1;
   const isCurrentPageLast = props.page === props.total;

@@ -8,6 +8,15 @@ interface editableTableProps {
     types: string[]
 }
 
+/**
+ * Represents a editableTable component
+ * @param props 
+ * @augments cols - array of column names for editable table
+ * @augments rows - array of row data for editable table
+ * @augments types - array of type for every column
+ * @returns editableTable component
+ */
+
 const EditableTable = (props: editableTableProps) => {
     return (
         <Table bordered hover className={styles.editableTable}>

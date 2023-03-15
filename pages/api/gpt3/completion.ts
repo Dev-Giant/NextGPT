@@ -20,6 +20,11 @@ type TextCompletionReqBody = {
     presencePenalty?: string
 }
 
+/**
+ * Represent api to get generated post from specific prompt
+ * @param req - parameters to get openAI completion
+ * @param res - openAI response
+ */
 
 export default async function handler(
     req: NextApiRequest,

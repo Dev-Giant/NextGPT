@@ -1,5 +1,11 @@
 import TableInput from "@/components/TableInput/TableInput";
 
+/**
+ * Represent TableRow component
+ * @returns TableRow with Dynamic data from api 
+ * This TableRow consists of TableInput component
+ */
+
 const TableRow = ({ data, types }: { data: any, types: string[] }) => {
     const rowData = Object.values(data);
     return (

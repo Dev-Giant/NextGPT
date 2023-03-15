@@ -8,6 +8,14 @@ interface ButtonGroupInterface {
   handleGenerate?: () => void
 }
 
+/**
+ * Represents a ButtonGroup Component
+ * @param props 
+ * @argument handleClear(function) - clear prompt
+ * @argument handleGenerate(function) - generate openAI request from prompt
+ * @returns ButtonGroup component with clear and generate functionality
+ */
+
 const ButtonGroup = (props: ButtonGroupInterface) => {
   return (
     <>

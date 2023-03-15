@@ -14,6 +14,21 @@ interface FormTextAreaProps {
   placeHolder?: string;
 }
 
+/**
+ * Represent FormTextArea component
+ * @param props 
+ * @argument label(string) - FormTextArea label
+ * @argument rows(number) - number of rows at FormTextArea
+ * @argument value(string) - FormTextArea value
+ * @argument setValue(function) - function to change FormTextArea value
+ * @argument isRequired(boolean) - make FormTextArea as required or optional
+ * @argument validationError(string) - FormTextArea's error
+ * @argument className(string) - FormTextArea's classNames
+ * @argument inputType(string) - FormTextArea's type
+ * @argument placeHolder(string) - FormTextArea's placeholder
+ * @returns FormInput component with label, value and default input props
+ */
+
 const FormTextArea = (props: FormTextAreaProps) => {
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

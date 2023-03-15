@@ -9,6 +9,12 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+/**
+ * Represents Layout Component
+ * @param props - Child Component
+ * @returns Layout Component with Child Component
+ */
+
 const Layout = (props: LayoutProps) => {
   const router = useRouter();
   const routes = ["/", "/sales", "/marketing", "/recruitment"];
